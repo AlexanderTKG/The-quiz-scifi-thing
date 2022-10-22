@@ -1,16 +1,16 @@
 const React = require('react')
 const Default = require('./layouts/Default')
 
-function Show ({baker}) {
+function Show ({recipe}) {
     return (
       <Default>
-          <h3>{baker.name}</h3>
-            <p>{baker.name} has been baking with us since {baker.startDate.getFullYear()}</p>
-            <p>About {baker.name}: {baker.bio}</p>
-          <h3>Breads {baker.name} has baked</h3>
+          <h3>{recipe.name}</h3>
+            <p>{recipe.name} has been baking with us since {recipe.startDate.getFullYear()}</p>
+            <p>About {recipe.name}: {recipe.bio}</p>
+          <h3>Breads {recipe.name} has baked</h3>
             <ul>
                 {
-                baker.breads.map((bread)=> {
+                recipe.breads.map((bread)=> {
                     return (
                         <li key={bread.id}>
                             {bread.name}
@@ -18,7 +18,7 @@ function Show ({baker}) {
                     )
                 })
                 }
-                <form action = {`/bakers/${baker.id}?_method=DELETE`} method='POST'>
+                <form action = {`/recipes/${recipe.id}?_method=DELETE`} method='POST'>
                     <input type = 'submit' value = 'DELETE' />
                 </form>
             </ul>

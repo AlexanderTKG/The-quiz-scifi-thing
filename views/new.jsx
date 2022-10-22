@@ -1,7 +1,7 @@
 const React = require('react')
 const Default = require('./layouts/Default')
 
-function New ({bakers}) {
+function New ({recipes}) {
     return (
         <Default>
             <h2>Add a new bread</h2>
@@ -22,11 +22,11 @@ function New ({bakers}) {
                     name = "image"
                     id = "image"
                 />
-                <label htmlFor="baker">Baker</label>
-                    <select name="baker" id="baker">
-                        {bakers.map((baker) => {
+                <label htmlFor="recipe">Recipe</label>
+                    <select name="recipe" id="recipe">
+                        {recipes.map((recipe) => {
                             return(
-                                <option value = {baker.id} key = {baker.id} > {baker.name}</option>
+                                <option value = {recipe.id} key = {recipe.id} > {recipe.name}</option>
                             )
                         })}
                     </select>

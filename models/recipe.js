@@ -4,7 +4,7 @@ const { Schema } = mongoose
 const Bread = require('./bread')
 
 // Schema
-const bakerSchema = new Schema({
+const recipeSchema = new Schema({
     name: {
         type: String,
         required: true,
@@ -19,16 +19,16 @@ const bakerSchema = new Schema({
 
 
 // Virtuals:
-bakerSchema.virtual('breads', {
+recipeSchema.virtual('breads', {
     ref: 'Bread',
     localField: '_id',
-    foreignField: 'baker'
+    foreignField: 'recipe'
 })
 
 
 //Hooks
-bakerSchema.post('findOneAndDelete', function() {
-  Bread.deleteMany({ baker: this._conditions._id })
+recipeSchema.post('findOneAndDelete', function() {
+  Bread.deleteMany({ recipe: this._conditions._id })
       .then(deleteStatus => {
           console.log(deleteStatus)
       })
@@ -36,5 +36,5 @@ bakerSchema.post('findOneAndDelete', function() {
 
 
 // Model and Export
-const Baker = mongoose.model('Baker', bakerSchema)
-module.exports = Baker
+const Recipe = mongoose.model('Recipe', recipeSchema)
+module.exports = Recipe
