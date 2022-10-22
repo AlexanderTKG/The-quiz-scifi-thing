@@ -8,10 +8,10 @@ function Index ({breads, recipes, title}) {
             <h3>Recipes</h3>
             <ul>
                 {
-                    recipes.map((baker) => {
+                    recipes.map((recipe) => {
                         return(
-                            <li key = {baker._id}>
-                                <a href = {`/recipes/${baker._id}`}>{baker.name}</a> 
+                            <li key = {recipe._id}>
+                                <a href = {`/recipes/${recipe._id}`}>{recipe.name}</a> 
                             </li>
                         )
                     })

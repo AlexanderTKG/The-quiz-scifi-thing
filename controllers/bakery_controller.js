@@ -1,16 +1,16 @@
 const express = require('express')
 const bakery = express.Router()
 const Bakery = require('../models/bread.js')
-const Baker = require('../models/baker.js')
+const Recipe = require('../models/recipe.js')
 
 // Index
 bakery.get('/', async (req, res) => {
-  const foundBakers = await Baker.find().lean()
+  const foundRecipes = await Recipe.find().lean()
   const foundBreads = await Bakery.find().limit(8).lean()
   console.log(foundBakery)
   res.render('index', {
     breads: foundBakery,
-    bakers: foundBakery,
+    recipes: foundBakery,
     title: 'Index Page'
   })
 })
@@ -18,10 +18,10 @@ bakery.get('/', async (req, res) => {
 
 // New
 bakery.get('/new', (req, res) => {
-  Baker.find()
-  .then(foundBakers => {
+  Recipe.find()
+  .then(foundRecipes => {
     res.render('new', {
-      bakers: foundBakers
+      recipes: foundRecipes
     })
   })
 })
@@ -29,13 +29,13 @@ bakery.get('/new', (req, res) => {
 
 // EDIT
 bakery.get('/:id/edit', (req, res) => {
-  Baker.find()
-  .then(foundBakers => {
+  Recipe.find()
+  .then(foundRecipes => {
     Bakery.findById(req.params.id) 
     .then(foundBakery => { 
       res.render('edit', {
         bakery: foundBakery,
-        bakers: foundBakers
+        recipes: foundRecipes
       })
     })
   })
@@ -45,7 +45,7 @@ bakery.get('/:id/edit', (req, res) => {
 // Show
 bakery.get('/:id', (req, res) => {
     Bread.findById(req.params.id)
-    .populate('baker')
+    .populate('recipe')
         .then(foundBakery => {
           const bakedBy = foundBakery.getBakedBy()
           console.log(bakedBy)
