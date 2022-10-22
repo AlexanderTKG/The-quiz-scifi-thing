@@ -4,11 +4,11 @@ const Default = require('./layouts/Default')
 function New ({bakers}) {
     return (
         <Default>
-            <h2>Add a new bread</h2>
+            <h2>Add a new bakery</h2>
             <div className = "backButton">
-                <a href = "/breads"><button>Go back to the index</button></a>
+                <a href = "/bakery"><button>Go back to the index</button></a>
             </div>
-            <form action = "/breads" method = "POST">
+            <form action = "/bakery" method = "POST">
                 <label htmlFor = "name">Name</label>
                 <input
                     type = "text"

@@ -1,28 +1,28 @@
 const React = require('react')
 const Default = require('./layouts/Default')
 
-function Edit ({bread, bakers}) {
+function Edit ({bakery, bakers}) {
     return (
       <Default>
-        <h2>Edit a bread</h2>
-        <form action={`/breads/${bread.id}?_method=PUT`} method="POST">
+        <h2>Edit a bakery</h2>
+        <form action={`/bakery/${bakery.id}?_method=PUT`} method="POST">
           <label htmlFor="name">Name</label>
           <input
             type="text"
             name="name"
             id="name"
             required
-            defaultValue={bread.name}
+            defaultValue={bakery.name}
           />
           <label htmlFor="image">Image</label>
           <input
             type="text"
             name="image"
             id="image"
-            defaultValue={bread.image}
+            defaultValue={bakery.image}
           />
           <label htmlFor="baker">Baker</label>
-          <select name="baker" id="baker" defaultValue={bread.baker}>
+          <select name="baker" id="baker" defaultValue={bakery.baker}>
             {bakers.map((baker) => {
               return(
                 <option value = {baker.id} key = {baker.id} > {baker.name}</option>
@@ -34,7 +34,7 @@ function Edit ({bread, bakers}) {
             type="checkbox"
             name="hasGluten"
             id="hasGluten"
-            defaultChecked={bread.hasGluten}
+            defaultChecked={bakery.hasGluten}
           />
           <br />
           <input type="submit"/>
