@@ -28,7 +28,7 @@ const bakeryController = require('./controllers/bakery_controller.js')
 app.use('/bakery', bakeryController)
 
 // Recipes
-const recipesController = require('./controllers/recipes_controller.js')
+const recipesController = require('./controllers/recipe_controller.js')
 app.use('/recipes', recipesController)
 
 // 404 Page

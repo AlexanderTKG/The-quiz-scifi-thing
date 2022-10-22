@@ -6,7 +6,7 @@ const Recipe = require('../models/recipe.js')
 // Index
 bakery.get('/', async (req, res) => {
   const foundRecipes = await Recipe.find().lean()
-  const foundBreads = await Bakery.find().limit(8).lean()
+  const foundBakery = await Bakery.find().limit(8).lean()
   console.log(foundBakery)
   res.render('index', {
     bakery: foundBakery,
