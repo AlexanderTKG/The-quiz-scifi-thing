@@ -6,14 +6,14 @@ const recipeSeedData = require('../models/recipe_seed.js')
 
 recipe.get('/data/seed', (req, res) => {
     Recipe.insertMany(recipeSeedData)
-        .then(res.redirect('/breads'))
+        .then(res.redirect('/bakery'))
 })
 
 
 // Index
 recipe.get('/', (req, res) => {
     Recipe.find()
-    .populate('breads')
+    .populate('bakery')
         .then(foundRecipes => {
             res.send(foundRecipes)
         })
@@ -24,7 +24,7 @@ recipe.get('/', (req, res) => {
 recipe.get('/:id', (req, res) => {
     Recipe.findById(req.params.id)
         .populate({
-            path: 'breads',
+            path: 'bakery',
             options: { limit: 5 }
         })
         .then(foundRecipe => {
@@ -39,7 +39,7 @@ recipe.get('/:id', (req, res) => {
 recipe.delete('/:id', (req, res) => {
     Recipe.findByIdAndDelete(req.params.id) 
       .then(deletedRecipe => { 
-        res.status(303).redirect('/breads')
+        res.status(303).redirect('/bakery')
       })
 })
 

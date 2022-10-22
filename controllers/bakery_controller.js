@@ -1,6 +1,6 @@
 const express = require('express')
 const bakery = express.Router()
-const Bakery = require('../models/bread.js')
+const Bakery = require('../models/bakery.js')
 const Recipe = require('../models/recipe.js')
 
 // Index
@@ -9,7 +9,7 @@ bakery.get('/', async (req, res) => {
   const foundBreads = await Bakery.find().limit(8).lean()
   console.log(foundBakery)
   res.render('index', {
-    breads: foundBakery,
+    bakery: foundBakery,
     recipes: foundBakery,
     title: 'Index Page'
   })
@@ -44,7 +44,7 @@ bakery.get('/:id/edit', (req, res) => {
 
 // Show
 bakery.get('/:id', (req, res) => {
-    Bread.findById(req.params.id)
+    Bakery.findById(req.params.id)
     .populate('recipe')
         .then(foundBakery => {
           const bakedBy = foundBakery.getBakedBy()
@@ -67,7 +67,7 @@ bakery.post('/', (req, res) => {
     } else {
         req.body.hasGluten = 'false'
     }
-    Bread.create(req.body)
+    Bakery.create(req.body)
     res.redirect('/bakery')
 })
 

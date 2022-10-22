@@ -20,7 +20,7 @@ app.use(methodOverride('_method'))
 
 // Routes
 app.get('/', (req, res) => {
-    res.send('Welcome to an Awesome App about Breads!')
+    res.send('Welcome to an Awesome App about Bakery!')
 })
 
 // Breads

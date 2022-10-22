@@ -7,13 +7,13 @@ function Show ({recipe}) {
           <h3>{recipe.name}</h3>
             <p>{recipe.name} has been baking with us since {recipe.startDate.getFullYear()}</p>
             <p>About {recipe.name}: {recipe.bio}</p>
-          <h3>Breads {recipe.name} has baked</h3>
+          <h3>Bakery {recipe.name} has baked</h3>
             <ul>
                 {
-                recipe.breads.map((bread)=> {
+                recipe.bakery.map((bakery)=> {
                     return (
-                        <li key={bread.id}>
-                            {bread.name}
+                        <li key={bakery.id}>
+                            {bakery.name}
                         </li>
                     )
                 })

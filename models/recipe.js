@@ -20,8 +20,8 @@ const recipeSchema = new Schema({
 
 
 // Virtuals:
-recipeSchema.virtual('breads', {
-    ref: 'Bread',
+recipeSchema.virtual('bakery', {
+    ref: 'Bakery',
     localField: '_id',
     foreignField: 'recipe'
 })
@@ -29,7 +29,7 @@ recipeSchema.virtual('breads', {
 
 //Hooks
 recipeSchema.post('findOneAndDelete', function() {
-  Bread.deleteMany({ recipe: this._conditions._id })
+  Bakery.deleteMany({ recipe: this._conditions._id })
       .then(deleteStatus => {
           console.log(deleteStatus)
       })
