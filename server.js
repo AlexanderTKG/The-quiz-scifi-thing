@@ -27,9 +27,9 @@ app.get('/', (req, res) => {
 const bakeryController = require('./controllers/bakery_controller.js')
 app.use('/bakery', bakeryController)
 
-// Bakers
-const bakersController = require('./controllers/bakers_controller.js')
-app.use('/bakers', bakersController)
+// Recipes
+const recipesController = require('./controllers/recipes_controller.js')
+app.use('/recipes', recipesController)
 
 // 404 Page
 app.get('*', (req, res) => {
