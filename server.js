@@ -20,16 +20,17 @@ app.use(methodOverride('_method'))
 
 // Routes
 app.get('/', (req, res) => {
-    res.send('Welcome to an Awesome App about Breads!')
+    res.send('Scifi Quiz!')
 })
 
-// Breads
-const breadsController = require('./controllers/breads_controller.js')
-app.use('/breads', breadsController)
+// Main Page
+const mainController = require('./controllers/main_controller.js')
+app.use('/main', mainController)
 
-// Bakers
-const bakersController = require('./controllers/bakers_controller.js')
-app.use('/bakers', bakersController)
+// // Bakers
+// const bakersController = require('./controllers/bakers_controller.js')
+// app.use('/bakers', bakersController)
+
 
 // 404 Page
 app.get('*', (req, res) => {
