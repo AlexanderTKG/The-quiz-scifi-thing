@@ -1,23 +1,23 @@
 const express = require('express')
-const breads = express.Router()
-const Bread = require('../models/bread.js')
+const bakery = express.Router()
+const Bakery = require('../models/bread.js')
 const Baker = require('../models/baker.js')
 
 // Index
-breads.get('/', async (req, res) => {
+bakery.get('/', async (req, res) => {
   const foundBakers = await Baker.find().lean()
-  const foundBreads = await Bread.find().limit(8).lean()
-  console.log(foundBreads)
+  const foundBreads = await Bakery.find().limit(8).lean()
+  console.log(foundBakery)
   res.render('index', {
-    breads: foundBreads,
-    bakers: foundBakers,
+    breads: foundBakery,
+    bakers: foundBakery,
     title: 'Index Page'
   })
 })
 
 
 // New
-breads.get('/new', (req, res) => {
+bakery.get('/new', (req, res) => {
   Baker.find()
   .then(foundBakers => {
     res.render('new', {
@@ -28,13 +28,13 @@ breads.get('/new', (req, res) => {
 
 
 // EDIT
-breads.get('/:id/edit', (req, res) => {
+bakery.get('/:id/edit', (req, res) => {
   Baker.find()
   .then(foundBakers => {
-    Bread.findById(req.params.id) 
-    .then(foundBread => { 
+    Bakery.findById(req.params.id) 
+    .then(foundBakery => { 
       res.render('edit', {
-        bread: foundBread,
+        bakery: foundBakery,
         bakers: foundBakers
       })
     })
@@ -43,21 +43,21 @@ breads.get('/:id/edit', (req, res) => {
 
 
 // Show
-breads.get('/:id', (req, res) => {
+bakery.get('/:id', (req, res) => {
     Bread.findById(req.params.id)
     .populate('baker')
-        .then(foundBread => {
-          const bakedBy = foundBread.getBakedBy()
+        .then(foundBakery => {
+          const bakedBy = foundBakery.getBakedBy()
           console.log(bakedBy)
             res.render('show', {
-                bread: foundBread
+                bakery: foundBakery
             })
         })
 })
 
 
 // Create
-breads.post('/', (req, res) => {
+bakery.post('/', (req, res) => {
     if (!req.body.image) {
     req.body.image = undefined
     }
@@ -68,35 +68,35 @@ breads.post('/', (req, res) => {
         req.body.hasGluten = 'false'
     }
     Bread.create(req.body)
-    res.redirect('/breads')
+    res.redirect('/bakery')
 })
 
 
 // Update
-breads.put('/:id', (req, res) => {
+bakery.put('/:id', (req, res) => {
   if(req.body.hasGluten === 'on'){
     req.body.hasGluten = true
   } else {
     req.body.hasGluten = false
   }
-  Bread.findByIdAndUpdate(req.params.id, req.body, { new: true }) 
-    .then(updatedBread => {
-      console.log(updatedBread) 
-      res.redirect(`/breads/${req.params.id}`) 
+  Bakery.findByIdAndUpdate(req.params.id, req.body, { new: true }) 
+    .then(updatedBakery => {
+      console.log(updatedBakery) 
+      res.redirect(`/bakery/${req.params.id}`) 
     })
 })
 
 
 
 // Delete
-breads.delete('/:id', (req, res) => {
-    Bread.findByIdAndDelete(req.params.id)
-        .then(deletedBread => {
-            res.status(303) .redirect('/breads')
+bakery.delete('/:id', (req, res) => {
+    Bakery.findByIdAndDelete(req.params.id)
+        .then(deletedBakery => {
+            res.status(303) .redirect('/bakery')
         })
 })
 
-module.exports = breads
+module.exports = bakery
 
 
 
