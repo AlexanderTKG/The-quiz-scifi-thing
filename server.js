@@ -11,6 +11,7 @@ mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopolo
   () => { console.log('connected to mongo: ', process.env.MONGO_URI) }
 )
 
+
 // Middleware
 app.use(express.urlencoded({extended: true}))
 app.use(express.static('public'))
@@ -31,6 +32,7 @@ app.use('/bakery', bakeryController)
 // Recipes
 const recipesController = require('./controllers/recipe_controller.js')
 app.use('/recipes', recipesController)
+
 
 // 404 Page
 app.get('*', (req, res) => {

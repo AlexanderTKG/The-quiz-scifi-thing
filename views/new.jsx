@@ -2,6 +2,7 @@ const React = require('react')
 const Default = require('./layouts/Default')
 
 function New ({recipes}) {
+    console.log('new recipe form')
     return (
         <Default>
             <h4>New recipe in mind? Add it to Grandma's list!</h4>

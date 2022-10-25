@@ -47,6 +47,7 @@ bakery.get('/:id', (req, res) => {
     Bakery.findById(req.params.id)
     .populate('recipe')
         .then(foundBakery => {
+          console.log(foundBakery)
           const bakedBy = foundBakery.getBakedBy()
           console.log(bakedBy)
             res.render('show', {

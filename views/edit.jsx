@@ -2,6 +2,7 @@ const React = require('react')
 const Default = require('./layouts/Default')
 
 function Edit ({bakery, recipes}) {
+  console.log('edit')
     return (
       <Default>
         <h2>Edit a bakery</h2>
@@ -27,15 +28,8 @@ function Edit ({bakery, recipes}) {
               return(
                 <option value = {recipe.id} key = {recipe.id} > {recipe.name}</option>
               )
-            })}
+              })}
           </select>
-          <label htmlFor="hasGluten">Has Gluten?</label>
-          <input
-            type="checkbox"
-            name="hasGluten"
-            id="hasGluten"
-            defaultChecked={bakery.hasGluten}
-          />
           <br />
           <input type="submit"/>
         </form>

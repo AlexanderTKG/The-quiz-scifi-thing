@@ -2,10 +2,11 @@ const React = require('react')
 const Default = require('./layouts/Default')
 
 function Index ({bakery, recipes, title}) {
+    console.log('main page')
     return (
         <Default title = {title}>
-            <h3>Recipes</h3>
-            <ul>
+            {/* <h3>Recipes</h3> */}
+            {/* <ul>
                 {
                     recipes.map((recipe) => {
                         return(
@@ -15,7 +16,7 @@ function Index ({bakery, recipes, title}) {
                         )
                     })
                 }
-            </ul>
+            </ul> */}
             <h3>Bakery</h3>
             {/* <p>I have {breads[0].name} bread!</p> */}
             <div className = "newButton">
