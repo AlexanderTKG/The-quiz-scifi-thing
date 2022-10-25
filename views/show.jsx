@@ -5,9 +5,7 @@ function Show ({bakery, index}) {
     console.log('showpage')
         return (
             <Default>
-                <h2>Show Page</h2>
                 <h3>{bakery.name}</h3>
-                <li><a href = '/bakery'>Go home</a></li>
                 <img src = {bakery.image} alt = {bakery.name} />
                 <p>{bakery.getBakedBy()}</p>
                 <a href={`/bakery/${bakery.id}/edit`}><button>Edit</button></a>
