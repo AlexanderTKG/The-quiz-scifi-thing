@@ -4,10 +4,13 @@ const Default = require('./layouts/Default')
 function Aboutus () {
     console.log('About Us Page')
     return (
-        <Default>
-          <html>
+      <Default>
+        <html>
           <head>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1.0"
+            />
             <style>
               {`
                 body {
@@ -82,71 +85,87 @@ function Aboutus () {
             </style>
           </head>
           <body>
-            <div class='about-section' >
-            <h1>About Us Page</h1>
-            <p>Some text</p>
-            <p>resize the browser</p>
-          </div>
-
-          <h2
-          style={{
-              textAlign: 'center',
-          }}
-          >
-            Our Team</h2>
-          <div class='row'>
-            <div class='column'>
-              <div class='card'>
-                <img src='/w3images/team1.jpg' alt='Jane'
-                style={{
-                  width: '100%',
-                }} />
-                <div class='container'>
-                  <h2>Jane Doe</h2>
-                  <p class="title" >CEO & founder</p>
-                  <p>Some text</p>
-                  <p>jane@example.com</p>
-                  <p><button class="button">Contact</button></p>
-              </div>
+            <div class="about-section">
+              <h1>About Us Page</h1>
+              <p>Some text</p>
+              <p>resize the browser</p>
             </div>
-          </div>
 
-          <div class="column">
-            <div class='card'>
-              <img src='/w3images/team2.jpg' alt='Jane'
+            <h2
               style={{
-                width: '100%',
-              }} />
-              <div class='container'>
-                <h2>Jane Doe</h2>
-                <p class="title" >CEO & founder</p>
-                <p>Some text</p>
-                <p>jane@example.com</p>
-                <p><button class="button">Contact</button></p>
+                textAlign: "center",
+              }}
+            >
+              Our Team
+            </h2>
+            <div class="row">
+              <div class="column">
+                <div class="card">
+                  <img
+                    src="https://www.w3schools.com/w3images/team1.jpg"
+                    alt="Jane"
+                    style={{
+                      width: "100%",
+                    }}
+                  />
+                  <div class="container">
+                    <h2>Jane Doe</h2>
+                    <p class="title">CEO & founder</p>
+                    <p>Some text</p>
+                    <p>jane@example.com</p>
+                    <p>
+                      <button class="button">Contact</button>
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div class="column">
-            <div class='card'>
-              <img src='/w3images/team3.jpg' alt='Jane' 
-              style={{
-                width: '100%',
-              }} />
-              <div class='container'>
-                <h2>Jane Doe</h2>
-                <p class="title" >CEO & founder</p>
-                <p>Some text</p>
-                <p>jane@example.com</p>
-                <p><button class="button">Contact</button></p>
+              <div class="column">
+                <div class="card">
+                  <img
+                    src="https://www.w3schools.com/w3images/team1.jpg"
+                    alt="Jane"
+                    style={{
+                      width: "100%",
+                    }}
+                  />
+                  <div class="container">
+                    <h2>Jane Doe</h2>
+                    <p class="title">CEO & founder</p>
+                    <p>Some text</p>
+                    <p>jane@example.com</p>
+                    <p>
+                      <button class="button">Contact</button>
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="column">
+                <div class="card">
+                  <img
+                    src="https://www.w3schools.com/w3images/team1.jpg"
+                    alt="Jane"
+                    style={{
+                      width: "100%",
+                    }}
+                  />
+                  <div class="container">
+                    <h2>Jane Doe</h2>
+                    <p class="title">CEO & founder</p>
+                    <p>Some text</p>
+                    <p>jane@example.com</p>
+                    <p>
+                      <button class="button">Contact</button>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
           </body>
-          </html>
-        </Default>
-    )
+        </html>
+      </Default>
+    );
 }
 
 module.exports = Aboutus

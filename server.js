@@ -42,10 +42,6 @@ app.get('*', (req, res) => {
     res.send('404')
 })
 
-
-
-
-
 // Listen
 app.listen(PORT, () => {
     console.log('listening on port', PORT);
