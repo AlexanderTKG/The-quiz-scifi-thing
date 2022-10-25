@@ -38,7 +38,7 @@ function Default(html) {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/bakery">Home</Nav.Link>
+            <Nav.Link href="/homepage">Home</Nav.Link>
             <Nav.Link href="/bakery/aboutus">About Us</Nav.Link>
             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>

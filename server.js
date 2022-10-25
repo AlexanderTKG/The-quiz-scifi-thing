@@ -22,10 +22,11 @@ app.use(methodOverride('_method'))
 
 // Routes
 app.get('/', (req, res) => {
-    res.send('Welcome to an Awesome App about Bakery!')
+    res.render('HomePage')
 })
 
 //Aboutus
+
 
 // Bakery
 const bakeryController = require('./controllers/bakery_controller.js')

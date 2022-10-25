@@ -15,8 +15,17 @@ bakery.get('/', async (req, res) => {
   })
 })
 
+// HomePage
+bakery.get('/homepage', (req, res) => {
+  Recipe.find()
+  .then(foundRecipes => {
+    res.render('Homepage', {
+      recipes: foundRecipes
+    })
+  })
+})
+
 // About Us
-// New
 bakery.get('/aboutus', (req, res) => {
   Recipe.find()
   .then(foundRecipes => {
