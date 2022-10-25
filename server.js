@@ -5,8 +5,6 @@ require('dotenv').config()
 const PORT = process.env.PORT
 const app = express()
 const mongoose = require('mongoose')
-const aboutUs = require('./views/aboutUs.jsx')
-var ReactDOMServer = require('react-dom/server');
 
 
 mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, 
@@ -27,10 +25,7 @@ app.get('/', (req, res) => {
     res.send('Welcome to an Awesome App about Bakery!')
 })
 
-app.get('/aboutUs', (req, res) => {
-    var html = ReactDOMServer.renderToString(React.createElement(aboutUs));
-    res.send(html)
-})
+//Aboutus
 
 // Bakery
 const bakeryController = require('./controllers/bakery_controller.js')
@@ -46,6 +41,9 @@ app.use('/recipes', recipesController)
 app.get('*', (req, res) => {
     res.send('404')
 })
+
+
+
 
 
 // Listen
