@@ -16,7 +16,6 @@ bakery.get('/', async (req, res) => {
 })
 
 // About Us
-// New
 bakery.get('/aboutus', (req, res) => {
   Recipe.find()
   .then(foundRecipes => {
