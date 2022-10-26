@@ -19,7 +19,7 @@ bakery.get('/', async (req, res) => {
 bakery.get('/homepage', (req, res) => {
   Recipe.find()
   .then(foundRecipes => {
-    res.render('Homepage', {
+    res.render('HomePage', {
       recipes: foundRecipes
     })
   })
@@ -60,6 +60,7 @@ bakery.get('/:id/edit', (req, res) => {
     })
   })
 })
+
 
 
 // Show

@@ -17,11 +17,8 @@ function Index ({bakery, recipes, title}) {
                     })
                 }
             </ul> */}
-            <h3>Bakery</h3>
+            <h3>Bakery Collections</h3>
             {/* <p>I have {breads[0].name} bread!</p> */}
-            <div className = "newButton">
-                <a href = "/bakery/new"><button>Add new recipe</button></a>
-            </div>
             <ul>
                 {
                     bakery.map((bakery, index) => {

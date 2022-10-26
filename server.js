@@ -22,7 +22,7 @@ app.use(methodOverride('_method'))
 
 // Routes
 app.get('/', (req, res) => {
-    res.render('HomePage')
+    res.redirect('HomePage')
 })
 
 //Aboutus
