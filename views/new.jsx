@@ -5,7 +5,7 @@ function New ({recipes}) {
     console.log('new recipe form')
     return (
         <Default>
-            <h4>New recipe in mind? Add it to Grandma's list!</h4>
+            <h1>New Gourmet Recipes</h1>
             {/* <div className = "backButton">
                 <a href = "/bakery"><button>Go back to the index</button></a>
             </div> */}
@@ -23,6 +23,7 @@ function New ({recipes}) {
                     type = "text"
                     name = "image"
                     id = "image"
+                    required
                 />
                 <br />
                 <label htmlFor = "comments">Comments<a style={{ marginLeft: '3rem' , lineHeight: '100px' }}></a></label>

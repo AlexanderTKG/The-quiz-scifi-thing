@@ -17,7 +17,7 @@ recipe.get('/', (req, res) => {
         .then(foundRecipes => {
             res.send(foundRecipes)
         })
-})     
+})
 
 
 // Show

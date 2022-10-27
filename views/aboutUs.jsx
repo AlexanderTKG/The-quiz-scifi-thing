@@ -28,7 +28,7 @@ function Aboutus () {
 
                 .column {
                   float: left;
-                  width: 33.3%;
+                  width: 30.5%;
                   margin-bottom: 16px;
                   padding: 0 8px;
                 }
@@ -83,12 +83,90 @@ function Aboutus () {
                 }
               `}
             </style>
+
+            {/* Social Media Links */}
+            <style>
+              {`
+              @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+                  $timing        : 265ms;
+                  $iconColor     : #00B5F5;
+                  $accent        : #002A8F;
+                  $bluefade      : #0043E0;
+                  $gradient      : #00B5F5;
+                  
+                  @mixin transformScale($size: 1) {
+                      transform: scale($size);
+                      -ms-transform: scale($size);
+                      -webkit-transform: scale($size);
+                  }
+                  
+                  body {
+                      background-color: rgba($iconColor, 0.05);
+                  }
+                  
+                  .social-container {
+                      width: 100px;
+                      margin: 0;
+                      text-align: center;
+                  }
+                  
+                  .social-icons {
+                      padding: 0;
+                      list-style: none;
+                      margin: 1em;
+                    
+                      li {
+                          display: inline-block;
+                          margin: 0.15em;
+                          position: relative;
+                          font-size: 1.2em;
+                      }
+                  
+                      i {
+                          color: #fff;
+                          position: absolute;
+                          top: 21px;
+                          left: 21px;
+                          transition: all $timing ease-out;
+                      }
+                  
+                      a {
+                          display: inline-block;
+                        
+                          &:before {
+                              @include transformScale();
+                              content: " ";
+                              width: 60px;
+                              height: 60px;
+                              border-radius: 100%;
+                              display: block;
+                              background: linear-gradient(45deg, $iconColor, $accent);
+                              transition: all $timing ease-out;
+                          }
+                          
+                          &:hover:before {
+                              transform: scale(0);
+                              transition: all $timing ease-in;
+                          }
+                          
+                          &:hover i {
+                              @include transformScale(2.2);
+                              color: $iconColor;
+                              background: -webkit-linear-gradient(45deg, $iconColor, $accent);
+                              -webkit-background-clip: text;
+                              -webkit-text-fill-color: transparent;
+                              transition: all $timing ease-in;
+                          }
+                      }
+                  }
+                  `}
+            </style>
           </head>
           <body>
             <div class="about-section">
-              <h1>About Us Page</h1>
-              <p>Some text</p>
-              <p>resize the browser</p>
+              <h1>About Us</h1>
+              <p>There's no saying no to grandma's cooking</p>
+              <p>We're just three people who found the beauty in our grandma's cooking</p>
             </div>
 
             <h2
@@ -109,12 +187,19 @@ function Aboutus () {
                     }}
                   />
                   <div class="container">
-                    <h2>Jane Doe</h2>
+                    <h2>Alexander Martinez-De Jesus</h2>
                     <p class="title">CEO & founder</p>
                     <p>Some text</p>
                     <p>jane@example.com</p>
                     <p>
-                      <button class="button">Contact</button>
+                      <div class="social-container">
+                      <ul class="social-icons">
+                          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                          <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+                      </ul>
+                      </div>
                     </p>
                   </div>
                 </div>
@@ -130,12 +215,19 @@ function Aboutus () {
                     }}
                   />
                   <div class="container">
-                    <h2>Jane Doe</h2>
+                    <h2>Binal Dalia</h2>
                     <p class="title">CEO & founder</p>
                     <p>Some text</p>
                     <p>jane@example.com</p>
                     <p>
-                      <button class="button">Contact</button>
+                      <div class="social-container">
+                      <ul class="social-icons">
+                          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                          <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+                      </ul>
+                      </div>
                     </p>
                   </div>
                 </div>
@@ -151,12 +243,19 @@ function Aboutus () {
                     }}
                   />
                   <div class="container">
-                    <h2>Jane Doe</h2>
+                    <h2>Ashley Vieira</h2>
                     <p class="title">CEO & founder</p>
                     <p>Some text</p>
                     <p>jane@example.com</p>
                     <p>
-                      <button class="button">Contact</button>
+                      <div class="social-container">
+                      <ul class="social-icons">
+                          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                          <li><a href="#"><i class="fa fa-codepen"></i></a></li>
+                      </ul>
+                      </div>
                     </p>
                   </div>
                 </div>
