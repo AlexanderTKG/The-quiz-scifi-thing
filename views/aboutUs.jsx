@@ -192,8 +192,7 @@ function Aboutus () {
                   <div class="container">
                     <h2>Alexander Martinez-De Jesus</h2>
                     <p class="title">CEO & founder</p>
-                    <p>Some text</p>
-                    <p>jane@example.com</p>
+                    <p>alexmdj@gmail.com</p>
                     <p>
                       <div class="social-container">
                         <ul class="social-icons">
@@ -236,8 +235,7 @@ function Aboutus () {
                   <div class="container">
                     <h2>Binal Dalia</h2>
                     <p class="title">CEO & founder</p>
-                    <p>Some text</p>
-                    <p>jane@example.com</p>
+                    <p>binald@gmail.com</p>
                     <p>
                       <div class="social-container">
                         <ul class="social-icons">
@@ -280,8 +278,7 @@ function Aboutus () {
                   <div class="container">
                     <h2>Ashley Vieira</h2>
                     <p class="title">CEO & founder</p>
-                    <p>Some text</p>
-                    <p>jane@example.com</p>
+                    <p>ashleyv@gmail.com</p>
                     <p>
                       <div class="social-container">
                         <ul class="social-icons">
