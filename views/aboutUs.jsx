@@ -166,7 +166,10 @@ function Aboutus () {
             <div class="about-section">
               <h1>About Us</h1>
               <p>There's no saying no to grandma's cooking</p>
-              <p>We're just three people who found the beauty in our grandma's cooking</p>
+              <p>
+                We're just three people who found the beauty in our grandma's
+                cooking
+              </p>
             </div>
 
             <h2
@@ -180,8 +183,8 @@ function Aboutus () {
               <div class="column">
                 <div class="card">
                   <img
-                    src="https://www.w3schools.com/w3images/team1.jpg"
-                    alt="Jane"
+                    src="https://cdn.discordapp.com/attachments/1032436615991275533/1035905150063235282/IMG_0042.webp"
+                    alt="Alexander"
                     style={{
                       width: "100%",
                     }}
@@ -193,12 +196,28 @@ function Aboutus () {
                     <p>jane@example.com</p>
                     <p>
                       <div class="social-container">
-                      <ul class="social-icons">
-                          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                          <li><a href="#"><i class="fa fa-codepen"></i></a></li>
-                      </ul>
+                        <ul class="social-icons">
+                          <li>
+                            <a href="#">
+                              <i class="fa fa-instagram"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <i class="fa fa-twitter"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <i class="fa fa-linkedin"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <i class="fa fa-codepen"></i>
+                            </a>
+                          </li>
+                        </ul>
                       </div>
                     </p>
                   </div>
@@ -208,8 +227,8 @@ function Aboutus () {
               <div class="column">
                 <div class="card">
                   <img
-                    src="https://www.w3schools.com/w3images/team1.jpg"
-                    alt="Jane"
+                    src="https://media.discordapp.net/attachments/1032436615991275533/1035902850288582686/IMG_7517.jpg?width=509&height=488"
+                    alt="Binal"
                     style={{
                       width: "100%",
                     }}
@@ -221,12 +240,28 @@ function Aboutus () {
                     <p>jane@example.com</p>
                     <p>
                       <div class="social-container">
-                      <ul class="social-icons">
-                          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                          <li><a href="#"><i class="fa fa-codepen"></i></a></li>
-                      </ul>
+                        <ul class="social-icons">
+                          <li>
+                            <a href="#">
+                              <i class="fa fa-instagram"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <i class="fa fa-twitter"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <i class="fa fa-linkedin"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <i class="fa fa-codepen"></i>
+                            </a>
+                          </li>
+                        </ul>
                       </div>
                     </p>
                   </div>
@@ -236,8 +271,8 @@ function Aboutus () {
               <div class="column">
                 <div class="card">
                   <img
-                    src="https://www.w3schools.com/w3images/team1.jpg"
-                    alt="Jane"
+                    src="https://i.imgur.com/XKvxQHWl.png"
+                    alt="Ashley"
                     style={{
                       width: "100%",
                     }}
@@ -249,12 +284,28 @@ function Aboutus () {
                     <p>jane@example.com</p>
                     <p>
                       <div class="social-container">
-                      <ul class="social-icons">
-                          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                          <li><a href="#"><i class="fa fa-codepen"></i></a></li>
-                      </ul>
+                        <ul class="social-icons">
+                          <li>
+                            <a href="#">
+                              <i class="fa fa-instagram"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <i class="fa fa-twitter"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <i class="fa fa-linkedin"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#">
+                              <i class="fa fa-codepen"></i>
+                            </a>
+                          </li>
+                        </ul>
                       </div>
                     </p>
                   </div>
