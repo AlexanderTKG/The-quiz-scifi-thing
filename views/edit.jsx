@@ -22,14 +22,6 @@ function Edit ({bakery, recipes}) {
             id="image"
             defaultValue={bakery.image}
           />
-          <label htmlFor="recipe">Recipe</label>
-          <select name="recipe" id="recipe" defaultValue={bakery.recipe}>
-            {recipes.map((recipe) => {
-              return(
-                <option value = {recipe.id} key = {recipe.id} > {recipe.name}</option>
-              )
-              })}
-          </select>
           <br />
           <input type="submit"/>
         </form>
