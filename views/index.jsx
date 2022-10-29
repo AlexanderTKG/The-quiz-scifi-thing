@@ -4,36 +4,26 @@ const Default = require('./layouts/Default')
 function Index ({bakery, recipes, title}) {
     console.log('main page')
     return (
-        <Default title = {title}>
-            {/* <h3>Recipes</h3> */}
-            {/* <ul>
-                {
-                    recipes.map((recipe) => {
-                        return(
-                            <li key = {recipe._id}>
-                                <a href = {`/recipes/${recipe._id}`}>{recipe.name}</a> 
-                            </li>
-                        )
-                    })
+      <Default title={title}>
+        <h3>Bakery Collection</h3>
+        <ul>
+          <style>
+            {`
+                a:link { 
+                        text-decoration: none; 
                 }
-            </ul> */}
-            <h3>Bakery Collections</h3>
-            {/* <p>I have {breads[0].name} bread!</p> */}
-            <ul>
-                {
-                    bakery.map((bakery, index) => {
-                        return (
-                            <li key = {bakery.id}>
-                                <a href = {`/bakery/${bakery._id}`}>
-                                    {bakery.name}
-                                </a>
-                            </li>
-                        )
-                    })
-                }
-            </ul>
-        </Default>
-    )
+            `}
+          </style>
+          {bakery.map((bakery, index) => {
+            return (
+              <li key={bakery.id}>
+                <a href={`/bakery/${bakery._id}`}>{bakery.name}</a>
+              </li>
+            );
+          })}
+        </ul>
+      </Default>
+    );
 }
 
 module.exports = Index

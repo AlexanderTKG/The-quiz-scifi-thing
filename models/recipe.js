@@ -9,7 +9,6 @@ const recipeSchema = new Schema({
     name: {
         type: String,
         required: true,
-        enum: ['Rachel', 'Monica', 'Joey', 'Chandler', 'Ross', 'Phoebe']
     },
     startDate: {
         type: Date,

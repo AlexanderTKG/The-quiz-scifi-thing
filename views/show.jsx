@@ -7,9 +7,9 @@ function Show ({bakery, index}) {
             <Default>
                 <h3>{bakery.name}</h3>
                 <img src = {bakery.image} alt = {bakery.name} />
-                <a>{bakery.comments}</a>
-                <p>{bakery.getBakedBy()}</p>
-                <a href={`/bakery/${bakery.id}/edit`}><button>Edit</button></a>
+                <p>{bakery.comments}</p>
+                {/* <p>{bakery.getBakedBy()}</p> */}
+                <a href={`/bakery/${bakery.id}/EDIT`}><button>EDIT</button></a>
                 <form action = {`/bakery/${bakery.id}?_method=DELETE`} method='POST'>
                     <input type = 'submit' value = 'DELETE' />
                 </form>

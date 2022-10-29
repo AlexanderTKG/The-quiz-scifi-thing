@@ -11,15 +11,7 @@ function HomePage() {
         </head>
         <body>
           <h1>Welcome to Our Company</h1>
-          <img
-            src="../public/images/foodBackground.jpg"
-            alt="background image"
-          />
-          <h2>Web Site Main Ingredients:</h2>
-          <p>Pages (HTML)</p>
-          <p>Style Sheets (CSS)</p>
-          <p>Computer Code (JavaScript)</p>
-          <p>Live Data (Files and Databases)</p>
+          <p>Here, we believe that our Grandma's desserts are too sweet to not share. In honor of them, we've put together a collection of their best recipes. Enjoy!</p>
         </body>
       </html>
     </Default>

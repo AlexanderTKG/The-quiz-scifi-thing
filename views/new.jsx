@@ -6,9 +6,6 @@ function New ({recipes}) {
     return (
         <Default>
             <h1>New Gourmet Recipes</h1>
-            {/* <div className = "backButton">
-                <a href = "/bakery"><button>Go back to the index</button></a>
-            </div> */}
             <form action = "/bakery" method = "POST">
                 <label htmlFor = "name">Recipe Name<a style={{ marginLeft: '2rem' , lineHeight: '100px'}}></a></label>
                 <input

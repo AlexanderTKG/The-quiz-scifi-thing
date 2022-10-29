@@ -6,7 +6,7 @@ const Recipe = require('../models/recipe.js')
 // Index
 bakery.get('/', async (req, res) => {
   const foundRecipes = await Recipe.find().lean()
-  const foundBakery = await Bakery.find().limit(8).lean()
+  const foundBakery = await Bakery.find().limit(200).lean()
   console.log(foundBakery)
   res.render('index', {
     bakery: foundBakery,
@@ -47,7 +47,7 @@ bakery.get('/new', (req, res) => {
 })
 
 
-// EDIT
+// Edit
 bakery.get('/:id/edit', (req, res) => {
   Recipe.find()
   .then(foundRecipes => {
@@ -60,7 +60,6 @@ bakery.get('/:id/edit', (req, res) => {
     })
   })
 })
-
 
 
 // Show
@@ -109,7 +108,6 @@ bakery.put('/:id', (req, res) => {
 })
 
 
-
 // Delete
 bakery.delete('/:id', (req, res) => {
     Bakery.findByIdAndDelete(req.params.id)
@@ -119,17 +117,3 @@ bakery.delete('/:id', (req, res) => {
 })
 
 module.exports = bakery
-
-
-
-// Show
-/*/ breads.get('/:arrayIndex', (req, res) => {
-    if (Bread[req.params.arrayIndex]) {
-        res.render('Show', {
-            bread: Bread[req.params.arrayIndex],
-            index: req.params.arrayIndex
-        })
-    } else {
-      res.render('404')
-    }
-}) */
