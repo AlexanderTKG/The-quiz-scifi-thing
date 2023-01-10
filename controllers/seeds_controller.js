@@ -1,7 +1,7 @@
 // dependencies
 const express = require('express')
 const recipe = express.Router()
-const Recipe = require('../models/recipe.js')
+const Recipe = require('../models/seeds.js')
 const recipeSeedData = require('../models/recipe_seed.js')
 
 recipe.get('/data/seed', (req, res) => {

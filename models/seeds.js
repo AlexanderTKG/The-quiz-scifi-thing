@@ -1,8 +1,8 @@
 // Dependencies
 const mongoose = require('mongoose')
-const Bakery = require('./bakery')
+const Bakery = require('./plant-life')
 const { Schema } = mongoose
-const Bread = require('./bakery')
+const Bread = require('./plant-life')
 
 // Schema
 const recipeSchema = new Schema({

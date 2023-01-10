@@ -21,15 +21,15 @@ app.use(methodOverride('_method'))
 
 // Routes
 app.get('/', (req, res) => {
-    res.redirect('HomePage')
+    res.render('HomePage')
 })
 
 // Bakery
-const bakeryController = require('./controllers/bakery_controller.js')
+const bakeryController = require('./controllers/plant-life_controller.js')
 app.use('/bakery', bakeryController)
 
 // Recipes
-const recipesController = require('./controllers/recipe_controller.js')
+const recipesController = require('./controllers/seeds_controller.js')
 app.use('/recipes', recipesController)
 
 // 404 Page
@@ -41,3 +41,6 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
     console.log('listening on port', PORT);
 })
+
+
+
